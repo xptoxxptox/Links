@@ -146,6 +146,8 @@ namespace ScreenShotDemo
     public void CaptureActiveWindowToFile(string filename, ImageFormat format) 
     { 
       Image img = CaptureActiveWindow(); 
+      EncoderParameter encoder = new EncoderParameter(1);
+      
       img.Save(filename,format); 
     } 
     /// <summary> 
